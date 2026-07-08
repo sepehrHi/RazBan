@@ -12,6 +12,7 @@ on:
     paths:
       - "apps/backend-cloudflare/**"
       - "apps/gas-relay/**"
+  workflow_dispatch: {}
 
 jobs:
   eslint-worker:

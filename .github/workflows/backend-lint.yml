@@ -40,4 +40,4 @@ jobs:
         with:
           node-version: 20.x
       - name: Check code.gs syntax
-        run: node --check apps/gas-relay/code.gs
+        run: node --check < apps/gas-relay/code.gs

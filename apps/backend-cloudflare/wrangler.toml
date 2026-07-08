@@ -1,0 +1,16 @@
+name = "razban"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "razban-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[vars]
+B2_ENDPOINT = "s3.us-west-004.backblazeb2.com"
+B2_BUCKET_NAME = "razban-files"
+
+# Set secrets locally with:
+#   wrangler secret put B2_ACCESS_KEY_ID
+#   wrangler secret put B2_SECRET_ACCESS_KEY

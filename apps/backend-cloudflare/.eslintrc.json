@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": false,
+    "es2022": true,
+    "worker": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "crypto": "readonly",
+    "Response": "readonly",
+    "Request": "readonly",
+    "URL": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-undef": "error"
+  }
+}

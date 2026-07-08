@@ -1,0 +1,42 @@
+name: Backend Lint
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "apps/backend-cloudflare/**"
+      - "apps/gas-relay/**"
+      - ".github/workflows/backend-lint.yml"
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "apps/backend-cloudflare/**"
+      - "apps/gas-relay/**"
+
+jobs:
+  eslint-worker:
+    name: ESLint Cloudflare Worker
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/backend-cloudflare
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+          cache-dependency-path: apps/backend-cloudflare/package.json
+      - run: npm install
+      - run: npm run lint
+
+  syntax-check-gas:
+    name: Syntax Check Google Apps Script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+      - name: Check code.gs syntax
+        run: node --check apps/gas-relay/code.gs

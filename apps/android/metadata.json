@@ -1,0 +1,6 @@
+{
+  "name": "Razban Messenger",
+  "description": "رازبان مسنجر - Modern, secure, and adaptive Persian messaging client with dynamic network routing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

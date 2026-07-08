@@ -1,0 +1,16 @@
+{
+  "name": "razban-backend-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Razban Messenger - Cloudflare Worker backend",
+  "main": "src/worker.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "wrangler": "^3.78.0"
+  }
+}
